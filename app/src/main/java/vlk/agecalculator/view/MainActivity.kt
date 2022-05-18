@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(), AgeCalculateResultCallback {
         val txtDte = this.getInputDob()
 
         txtDte.setOnClickListener {
+            TODO("Move this to ViewModel")
             val inputtedCalendar = Calendar.getInstance()
             // Re-use inputted date as init value
             // if there isn't any inputted date, use current datetime
@@ -111,6 +112,7 @@ class MainActivity : AppCompatActivity(), AgeCalculateResultCallback {
      */
     private fun makeInput() : Input {
 
+        TODO("Proper approach to handle input in ViewModel")
         val dob : String = this.getInputDob().text.toString()
         val unit : CaclUnit = this.getInputUnit().selectedItem as CaclUnit
 
