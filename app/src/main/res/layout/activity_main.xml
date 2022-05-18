@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/layout_padding"
+        android:divider="@drawable/empty_divider"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inTextDob"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_field_height"
+            android:inputType="date"
+            android:hint="@string/input_hint_dob"
+            android:layout_weight="1">
+
+        </com.google.android.material.textfield.TextInputEditText>
+        
+        <LinearLayout
+            android:id="@+id/lResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height"
+                android:text="You have lived for"
+                android:gravity="end|center"
+                android:layout_weight="2">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/lstDayUnits"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_field_height"
+                android:contentDescription="@string/input_hint_day_unit"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="@dimen/input_field_height"
+            android:layout_gravity="right"
+            android:text="@string/calculate">
+
+        </Button>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Age Calculator</string>
+
+    <string name="input_hint_dob">When was you born?</string>
+    <string name="input_hint_day_unit">Days or Months?</string>
+    <string name="calculate">Calculate!</string>
+</resources>
